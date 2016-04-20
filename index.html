@@ -5,13 +5,44 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title></title>
-    <link href="style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="assets/css/html5reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
   </head>
 
   <body>
-    <div class="large-text">
-      testing, testing, testing. here is some text large.
+    <div class="wrapper">
+
+      <section class="section group">
+        <div class="col span_6_of_12 coupon-cell">
+          <header class="coupon-heading heading-flex">
+            <h2 class="header-text">Header text would go here Header text would go here Header text would go here</h2>
+          </header>
+
+          <div class="content-flex">
+            <div class="coupon-image"></div>
+            <article class="coupon-body make-ellipses">
+              <p class="coupon-text">Accommodate for text that does not fit in its container (title and description for example). At a minimum an ellipsis should appear when there is more text than fits in the container, and no ellipsis when the entire text does fit.</p>
+              <!-- <a href="#" class="ellipsis-handler">Read more</a> -->
+            </article>
+
+          </div>
+          <button class="ellipsis-handler">Read more</button>
+
+          <footer class="footer">
+            <button type="" class="btn">button</button>
+          </footer>
+
+        </div>
+
+      </section>
+
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="assets/scripts/ellipsis-verily.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="assets/scripts/fewlines-min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="assets/scripts/scripts.js" type="text/javascript" charset="utf-8"></script>
   </body>
 </html>
