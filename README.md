@@ -1,4 +1,4 @@
-# Coupon Display Exercise for SavingStar
+# Coupon Display Exercise
 A short, open-ended exercise of designing and implementing a coupon using HTML &amp; CSS (JS optional).
 
 From an information architecture perspective, a coupon "cell" consists of a header section (title), body section (image &amp; description) and a footer section (actions, links, etc). The below image illustrates this with a wireframe.
@@ -29,7 +29,7 @@ Now that you have a decent example of your front-end skills, take a moment to co
 ### Bonus :)
 
 And of course nothing makes an exercise more interesting than a bonus task!
-* How would you approach displaying more than one of the coupon "cells" you just implemented on a single page? See SavingStar.com, ibotta.com/rebates, or coupons.com for some live examples.
+* How would you approach displaying more than one of the coupon "cells" you just implemented on a single page? See ibotta.com/rebates, or coupons.com for some live examples.
 * How could the layout change if viewed on a small screen (phone) vs. a large screen (desktop, TV)?
 
 
