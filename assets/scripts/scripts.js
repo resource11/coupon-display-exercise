@@ -7,7 +7,9 @@
 $(function() {
 
 
-  $('.header-text').fewlines({lines : 1});
+  $('.header-text01').fewlines({lines : 1});
+
+  $('.header-text02').fewlines({lines : 1});
 
   $('.coupon-text').fewlines({lines : 4});
 

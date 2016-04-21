@@ -1,16 +1,21 @@
 
 
 body {
-  font-family: Verdana, sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #eee;
 }
 
 h2 {
   display: inline-block;
-  font-size: .9em;
-  font-weight: normal;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.3em;
+  font-weight: 300;
+/*  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);*/
 }
 
 p {
+  color: #646464;
   font-size: .8em;
 }
 
@@ -27,12 +32,16 @@ p {
 
 .coupon-cell {
   position: relative;
-  margin-right: 3%;
   max-width: 420px;
-  min-height: 237px;
+  min-height: 180px;
   overflow: auto;
-  border: 1px solid #6c6c6c;
-  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.alternate-cell {
+  border-top: 4px solid #2E7ABE;
 }
 
 .heading-flex {
@@ -62,6 +71,12 @@ p {
   height: 0;
 }
 
+.header-text02 {
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 1.2em;
+  font-weight: 700;
+}
 
 .content-flex {
   box-sizing: border-box;
@@ -95,8 +110,8 @@ p {
   position: relative;
   padding: 0 20px;
   color: #fff;
-  background-color: #6c6c6c;
-  border: none;
+  background-color: #014282;
+  border-top: 4px solid #2E7ABE;
 }
 
 
@@ -131,7 +146,10 @@ p {
 
 .coupon-image > p {
   color: #fff;
-  font-weight: bold;
+  font-family: 'Open Sans', sans-serif;
+  font-size: .9em;
+  font-weight: 700;
+  text-align: center;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
@@ -148,19 +166,36 @@ p {
   width: 100%;
   overflow: auto;
   padding: 2%;
-  background-color: #eee;
 }
 
 .btn {
   box-sizing: border-box;
   float: right;
-  width: 139px;
-  padding: 13px;
+  width: 70px;
+  padding: 5px;
   color: #fff;
-  font-weight: bold;
+  font-family: 'Open Sans', sans-serif;
+  font-size: .8em;
+  font-weight: 700;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
   text-transform: uppercase;
   border: 0;
   border-radius: 5px;
+  background: #fca902; /* Old browsers */
+  background: -moz-radial-gradient(center, ellipse cover, #fca902 18%, #ff7f04 100%); /* FF3.6-15 */
+  background: -webkit-radial-gradient(center, ellipse cover, #fca902 18%,#ff7f04 100%); /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center, #fca902 18%,#ff7f04 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fca902', endColorstr='#ff7f04',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.btn:hover {
+
+  background: #ff6600; /* Old browsers */
+  background: -moz-radial-gradient(center, ellipse cover,  #ff6600 19%, #c72200 100%); /* FF3.6-15 */
+  background: -webkit-radial-gradient(center, ellipse cover,  #ff6600 19%,#c72200 100%); /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center,  #ff6600 19%,#c72200 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff6600', endColorstr='#c72200',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
 }
 
 
@@ -182,28 +217,16 @@ p {
 
 
 a {
-  color: #d4d4d4;
+  color: #2780BA;
   text-decoration: none;
   font-size: .8em;
   font-weight: bold;
 }
-a .ellipsis-handler {
-  border: solid 1px #ccc;
-  background-color: #eee;
-  padding: 5px;
-  border-radius: 3px;
+
+.option02 > .coupon-cell:nth-child(2n) {
+/*  background-color: #2E7ABE;*/
+  border-top: 4px solid #014282;
 }
-
-
-.display-none {
-  display: none;
-}
-.display-inline,
-.visible-text {
-  display: inline-block;
-}
-
-
 
 /*  MEDIA QUERIES */
 
@@ -216,13 +239,17 @@ a .ellipsis-handler {
   .coupon-image {
     float: none;
     margin: 22px auto 5px;
-    width:80%;
+    width:90%;
     background: url(../images/img-md.jpg);
+  }
+
+  .coupon-image > p {
+    font-size: 1.1em;;
   }
 
   .coupon-body {
     float: none;
-    width: 80%;
+    width: 90%;
     margin: 5px auto;
   }
 
@@ -230,7 +257,7 @@ a .ellipsis-handler {
     box-sizing: border-box;
     display: block;
 
-    min-height: 275px;
+    min-height: 235px;
   }
 
 }
