@@ -51,6 +51,7 @@ p {
   align-content: center;
   align-items: center;
   min-height: 39px;
+  max-height: 39px;
 }
 
 .heading-flex:after {
@@ -92,7 +93,7 @@ p {
 
 .coupon-heading {
   position: relative;
-  padding: 0 9px;
+  padding: 0 20px;
   color: #fff;
   background-color: #6c6c6c;
   border: none;
@@ -101,16 +102,37 @@ p {
 
 
 .coupon-image {
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-box-align: center;
+  -webkit-box-align: center;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+
   position: relative;
   float: left;
   margin: 0 19px;
-  min-height: 100px;
+  height: 100px;
   min-width: 100px;
   background: url(../images/img-sm.jpg);
   background-clip: border-box;
   background-origin: padding-box;
   background-size: cover;
   border-radius: 5px;
+}
+
+.coupon-image > p {
+  color: #fff;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
 .coupon-body {
@@ -141,13 +163,8 @@ p {
   border-radius: 5px;
 }
 
-.header-ellipsis {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
 
-.body-ellipsis {
+/*.body-ellipsis {
   display: block;
   display: -webkit-box;
   -webkit-line-clamp: 5;
@@ -161,11 +178,11 @@ p {
   text-overflow: ellipsis;
   line-height: 1;
 }
-
+*/
 
 
 a {
-  color: #ffa500;
+  color: #d4d4d4;
   text-decoration: none;
   font-size: .8em;
   font-weight: bold;
@@ -176,14 +193,7 @@ a .ellipsis-handler {
   padding: 5px;
   border-radius: 3px;
 }
-.make-ellipsis {
-  width: 70%;
-  margin: auto;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  padding: 5%;
-  border: solid 1px #ccc;
-  background-color: #fff;
-}
+
 
 .display-none {
   display: none;
@@ -198,18 +208,29 @@ a .ellipsis-handler {
 /*  MEDIA QUERIES */
 
 @media only screen and (max-width: 420px) {
-  .body-ellipsis {
-    display: block;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -moz-box-orient: vertical;
-    -ms-box-orient: vertical;
-    -webkit-box-orient: vertical;
-    max-width: 100%;
-    height: 40px;
+
+  .coupon-heading {
     margin: 0 auto;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    line-height: 1;
   }
+
+  .coupon-image {
+    float: none;
+    margin: 22px auto 5px;
+    width:80%;
+    background: url(../images/img-md.jpg);
+  }
+
+  .coupon-body {
+    float: none;
+    width: 80%;
+    margin: 5px auto;
+  }
+
+  .content-flex {
+    box-sizing: border-box;
+    display: block;
+
+    min-height: 275px;
+  }
+
 }
